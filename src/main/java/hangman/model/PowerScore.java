@@ -18,9 +18,23 @@ public class PowerScore implements GameScore{
      * Si se sobrepasa de 500 puntos el puntaje maximo es 500.
      * @param correctCount  Aciertos correctos del jugador.
      * @param incorrectCount    Aciertos incorrectos del jugador.
+     * @throws modelException   Valores invalidos.
      * @return Retorna el puntaje del juego.
      */
-    public int calculateScore(int correctCount, int incorrectCount){
-        return 0;
+    public int calculateScore(int correctCount, int incorrectCount)throws modelException{
+        if(correctCount <0 || incorrectCount <0 ){
+            throw new modelException("Parametros Invalidos.");
+        }
+        int resp = 0;
+        for(int i=0; i<correctCount;i++){
+            resp += Math.pow(5,i+1);
+        }
+        resp -= incorrectCount*8;
+        if (resp < 0){
+            resp = 0;
+        }else if(resp > 500){
+            resp = 500;
+        }
+        return resp;
     }
 }

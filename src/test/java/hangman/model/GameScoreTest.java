@@ -60,7 +60,7 @@ public class GameScoreTest {
             int respuesta = score.calculateScore(-5, 1);
         }catch(Exception e){
             valid = false;
-            assertFalse(valid);
+            assertFalse(valid); 
         }
     }
     
@@ -92,19 +92,19 @@ public class GameScoreTest {
     
     //Validos.
     @Test
-    public void deberiaCalcularConOriginalScore(){
+    public void deberiaCalcularConOriginalScore() throws modelException{
         OriginalScore score = new OriginalScore();
         assertEquals(score.calculateScore(5,3),70);    
     }
     
     @Test
-    public void deberiaCalcularConBonusScore(){
+    public void deberiaCalcularConBonusScore() throws modelException{
         BonusScore score = new BonusScore();
         assertEquals(score.calculateScore(5,3),35);
     }
     
     @Test
-    public void deberiCalcularConPowerBonusScore(){
+    public void deberiCalcularConPowerBonusScore() throws modelException{
         PowerScore score = new PowerScore();
         assertEquals(score.calculateScore(5,3),500);
     }
@@ -112,19 +112,19 @@ public class GameScoreTest {
     //Minimos y maximos
     
     @Test
-    public void deberiaConsiderarLosLimitesDeOriginalScore(){
+    public void deberiaConsiderarLosLimitesDeOriginalScore() throws modelException{
         OriginalScore score = new OriginalScore();
         assertEquals(score.calculateScore(3,11),0); 
     }
     
     @Test
-    public void deberiaConsiderarLosLimitesDeBonusScore(){
+    public void deberiaConsiderarLosLimitesDeBonusScore() throws modelException{
         BonusScore score = new BonusScore();
         assertEquals(score.calculateScore(2,5),0); 
     }
     
     @Test
-    public void deberiaConsiderarLosLimitesDePowerScore(){
+    public void deberiaConsiderarLosLimitesDePowerScore() throws modelException{
         PowerScore score = new PowerScore();
         assertEquals(score.calculateScore(4,2),500); 
     }

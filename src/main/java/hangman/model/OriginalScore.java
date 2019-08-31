@@ -17,10 +17,20 @@ public class OriginalScore implements GameScore{
      * El puntaje minimo es 0
      * @param correctCount  Aciertos correctos del jugador.
      * @param incorrectCount    Aciertos incorrectos del jugador.
+     * @throws modelException   Valores invalidos.
      * @return Retorna el puntaje del juego.
      */
-    public int calculateScore(int correctCount, int incorrectCount){
-        return 0;
+    public int calculateScore(int correctCount, int incorrectCount)throws modelException {
+        if(correctCount <0 || incorrectCount <0 ){
+            throw new modelException("Parametros Invalidos.");
+        }
+        int resp = 0;
+        int puntaje = 100;
+        resp = puntaje - (incorrectCount*10);
+        if (resp < 0){
+            resp = 0;
+        }
+        return resp;
     }
     
 }
