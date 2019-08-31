@@ -19,9 +19,8 @@ public class OriginalScore implements GameScore{
      * @param incorrectCount    Aciertos incorrectos del jugador.
      * @return Retorna el puntaje del juego.
      */
-    @override
-    public int calculateScore(correctCount int, incorrectCount int){
-        
+    public int calculateScore(int correctCount, int incorrectCount){
+        return 0;
     }
     
 }

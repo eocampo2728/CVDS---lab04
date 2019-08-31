@@ -14,6 +14,6 @@ public interface GameScore {
     /**
      * 
      */
-    public int calculateScore (correctCount int , incorrectCount int);
+    public int calculateScore (int correctCount, int incorrectCount);
     
 }
