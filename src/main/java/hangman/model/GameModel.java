@@ -64,6 +64,7 @@ public class GameModel {
     //method: makeGuess
     //purpose: check if user guess is in string. Return a
     // list of positions if character is found in string
+    // Se cambio la estructura del calculo del puntaje del juego implementando la interface gameScore.
     public ArrayList<Integer> makeGuess(String guess) throws modelException{
         char guessChar = guess.charAt(0);
         ArrayList<Integer> positions = new ArrayList<>();
