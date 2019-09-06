@@ -16,4 +16,6 @@ public interface GameScore {
      */
     public int calculateScore (int correctCount, int incorrectCount)throws modelException;
     
+    public int getInicialScore();
+    
 }

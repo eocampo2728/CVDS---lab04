@@ -37,4 +37,8 @@ public class PowerScore implements GameScore{
         }
         return resp;
     }
+    
+    public int getInicialScore(){
+        return 0;
+    }
 }

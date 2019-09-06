@@ -33,4 +33,8 @@ public class OriginalScore implements GameScore{
         return resp;
     }
     
+    public int getInicialScore(){
+        return 100;
+    }
+    
 }
